@@ -10,6 +10,7 @@ namespace Bai6_EpKieuTrongCSharp
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
