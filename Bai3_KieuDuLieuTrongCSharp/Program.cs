@@ -27,6 +27,7 @@ namespace Bai3_KieuDuLieuTrongCSharp
             Console.WriteLine(BienLong);
             ulong BienUlong = 234567890;    //8 bytes   - Số nguyên không dấu có giá trị từ 0 đến 18,446,744,073,709,551,615
             Console.WriteLine(BienUlong);
+            Console.ReadKey();
             #endregion
 
             #region Kiểu số thực
@@ -36,24 +37,26 @@ namespace Bai3_KieuDuLieuTrongCSharp
             Console.WriteLine(BienDouble);
             decimal BienDecimal = 78.901m;  //8 bytes   - Có độ chính xác đến 28 con số và giá trị thập phân
             Console.WriteLine(BienDecimal);
+            Console.ReadKey();
             #endregion
 
             #region Kiểu logic
             bool BienLogic = true;          //1 byte    - Chứa 1 trong 2 giá trị logic là true hoặc false
             Console.WriteLine(BienLogic);
+            Console.ReadKey();
             #endregion
 
             #region Kiểu ký tự
             Char BienChar = 'A';            //2 bytes   - Chứa một ký tự Unicode
             Console.WriteLine(BienChar);
+            Console.ReadKey();
             #endregion
 
             #region Kiểu chuỗi
             string BienChuoi = null;
             Console.WriteLine(BienChuoi);
-            #endregion
-
             Console.ReadKey();
+            #endregion
         }
     }
 }

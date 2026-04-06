@@ -27,6 +27,7 @@ namespace Bai4_ToanTuTrongCSharp
             #region Toán tử quan hệ
             int a = 2, b = 3;
             Console.WriteLine("a = {0}, b = {1}", a, b);
+
             //So sánh 2 toán hạng có bằng nhau không
             if (a == b)
             {
@@ -36,6 +37,7 @@ namespace Bai4_ToanTuTrongCSharp
             {
                 Console.WriteLine("a = b is false");
             }
+
             //So sánh 2 toán hạng có khác nhau không
             if (a != b)
             {
@@ -45,6 +47,7 @@ namespace Bai4_ToanTuTrongCSharp
             {
                 Console.WriteLine("a != b is false");
             }
+
             //So sánh toán hạng bên trái có lớn hơn toán hạng bên phải không
             if (a > b)
             {
@@ -54,6 +57,7 @@ namespace Bai4_ToanTuTrongCSharp
             {
                 Console.WriteLine("a > b is false");
             }
+
             //So sánh toán hạng bên trái có bé hơn toán hạng bên phải không
             if (a < b)
             {
@@ -63,6 +67,7 @@ namespace Bai4_ToanTuTrongCSharp
             {
                 Console.WriteLine("a < b is false");
             }
+
             //So sánh toán hạng bên trái có lớn hơn hoặc bằng toán hạng bên phải không
             if (a >= b)
             {
@@ -72,6 +77,7 @@ namespace Bai4_ToanTuTrongCSharp
             {
                 Console.WriteLine("a >= b is false");
             }
+
             //So sánh toán hạng bên trái có bé hơn hoặc bằng toán hạng bên phải không
             if (a <= b)
             {
@@ -81,12 +87,14 @@ namespace Bai4_ToanTuTrongCSharp
             {
                 Console.WriteLine("a <= b is false");
             }
+
             Console.ReadKey();
             #endregion
 
             #region Toán tử logic
             int a = 1, b = 2, c = 3, d = 4;
             Console.WriteLine("a = {0}, b = {1}, c = {2}, d = {3}", a, b, c, d);
+
             //Toán tử logic AND
             if ((a < b) && (c < d))
             {
@@ -96,6 +104,7 @@ namespace Bai4_ToanTuTrongCSharp
             {
                 Console.WriteLine("(a < b) && (c < d) is false");
             }
+
             //Toán tử logic OR
             if ((a < b) || (c == d))
             {
@@ -105,6 +114,7 @@ namespace Bai4_ToanTuTrongCSharp
             {
                 Console.WriteLine("(a < b) || (c = d) is false");
             }
+
             //Toán tử logic NOT
             if (!(a < b))
             {
@@ -114,6 +124,7 @@ namespace Bai4_ToanTuTrongCSharp
             {
                 Console.WriteLine("!(a < b) is false");
             }
+
             Console.ReadKey();
             #endregion
 
