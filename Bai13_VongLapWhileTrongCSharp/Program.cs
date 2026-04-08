@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bai12_VongLapForTrongCSharp
+namespace Bai13_VongLapWhileTrongCSharp
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int i;
-            double j = 0;
-            for (i = 0; (i < 10) & (j < 100); i++, j += 10)
+            int a = 0;
+            while (a < 10)
             {
-                Console.WriteLine("i = {0}, j = {1}", i, j);
+                Console.WriteLine("a = " + a);
+                a++;
             }
             Console.ReadKey();
         }
