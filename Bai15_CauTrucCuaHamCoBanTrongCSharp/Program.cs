@@ -17,13 +17,11 @@ namespace Bai15_CauTrucCuaHamCoBanTrongCSharp
 
             Console.ReadKey();
         }
-
         static void VoidDemo()
         {
             Console.WriteLine("HelloWorld");
             IntDemo(10);
         }
-
         static int IntDemo(int a)
         {
             Console.Write("a = {0}, ", a);
@@ -31,7 +29,6 @@ namespace Bai15_CauTrucCuaHamCoBanTrongCSharp
             Console.WriteLine("a + 5 = " + a);
             return a;
         }
-
         static double DoubleDemo(double a, double b)
         {
             return (a * b);
