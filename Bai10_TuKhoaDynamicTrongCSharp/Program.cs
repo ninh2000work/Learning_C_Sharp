@@ -11,7 +11,8 @@ namespace Bai10_TuKhoaDynamicTrongCSharp
         static void Main(string[] args)
         {
             #region Dynamic
-            dynamic a = 10;
+            dynamic a;
+            a = 10;
             Console.WriteLine(a);
             Console.ReadKey();
 
