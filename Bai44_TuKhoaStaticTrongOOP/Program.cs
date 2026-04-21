@@ -44,6 +44,11 @@ namespace Bai44_TuKhoaStaticTrongOOP
                 Count++;
             }
 
+            public void ThongTin()
+            {
+                Console.WriteLine("TenSV: {0}, MSSV: {1}\n", hoten, mssv);
+            }
+
             public static void ThongTinSV(string ten1, int ms1)
             {
                 Console.WriteLine("TenSV: {0}, MSSV: {1}", ten1, ms1);
@@ -77,11 +82,13 @@ namespace Bai44_TuKhoaStaticTrongOOP
 
             SinhVien SV1 = new SinhVien();
             Console.WriteLine("So luong sinh vien: " + SinhVien.Count);
-            Console.WriteLine("TenSV: {0}, MSSV: {1}\n", SV1.Hoten, SV1.Mssv);
+            Console.WriteLine("TenSV: {0}, MSSV: {1}", SV1.Hoten, SV1.Mssv);
+            SV1.ThongTin();
 
             SinhVien SV2 = new SinhVien("B", 5678);
             Console.WriteLine("So luong sinh vien: " + SinhVien.Count);
-            Console.WriteLine("TenSV: {0}, MSSV: {1}\n", SV2.Hoten, SV2.Mssv);
+            Console.WriteLine("TenSV: {0}, MSSV: {1}", SV2.Hoten, SV2.Mssv);
+            SV2.ThongTin();
             #endregion
 
             #region Phương thức tĩnh
