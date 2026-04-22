@@ -7,74 +7,74 @@ using System.Threading.Tasks;
 
 namespace Bai44_TuKhoaStaticTrongOOP
 {
+    class SinhVien
+    {
+        private string hoten;
+        private int mssv;
+
+        public string Hoten
+        {
+            get { return hoten; }
+
+            set { hoten = value; }
+        }
+
+        public int Mssv
+        {
+            get { return mssv; }
+
+            set { mssv = value; }
+        }
+
+        public static int Count;
+
+        public SinhVien()
+        {
+            hoten = "A";
+            mssv = 1234;
+            Count++;
+        }
+
+        public SinhVien(string ten, int ms)
+        {
+            hoten = ten;
+            mssv = ms;
+            Count++;
+        }
+
+        public void ThongTin()
+        {
+            Console.WriteLine("TenSV: {0}, MSSV: {1}\n", hoten, mssv);
+        }
+
+        public static void ThongTinSV(string ten1, int ms1)
+        {
+            Console.WriteLine("TenSV: {0}, MSSV: {1}", ten1, ms1);
+            Count++;
+        }
+    }
+
+    static class NhanVien
+    {
+        private static int MaNV = 456;
+
+        public static void TenNhanVien(string TenNV)
+        {
+            Console.WriteLine("TenNV: {0}, MaNV: {1}", TenNV, MaNV);
+        }
+    }
+
+    class HocSinh
+    {
+        public static string TenHS;
+        static HocSinh()
+        {
+            TenHS = "E";
+        }
+    }
+
     internal class Program
     {
-        class SinhVien
-        {
-            private string hoten;
-            private int mssv;
-
-            public string Hoten
-            {
-                get { return hoten; }
-
-                set { hoten = value; }
-            }
-
-            public int Mssv
-            {
-                get { return mssv; }  
-                
-                set { mssv = value; }
-            }
-
-            public static int Count;
-
-            public SinhVien()
-            {
-                hoten = "A";
-                mssv = 1234;
-                Count++;
-            }
-
-            public SinhVien(string ten, int ms)
-            {
-                hoten = ten;
-                mssv = ms;
-                Count++;
-            }
-
-            public void ThongTin()
-            {
-                Console.WriteLine("TenSV: {0}, MSSV: {1}\n", hoten, mssv);
-            }
-
-            public static void ThongTinSV(string ten1, int ms1)
-            {
-                Console.WriteLine("TenSV: {0}, MSSV: {1}", ten1, ms1);
-                Count++;
-            }
-        }
-
-        static class NhanVien
-        {
-            private static int MaNV = 456;
-
-            public static void TenNhanVien(string TenNV)
-            {
-                Console.WriteLine("TenNV: {0}, MaNV: {1}", TenNV, MaNV);
-            }
-        }
-
-        class HocSinh
-        {
-            public static string TenHS;
-            static HocSinh()
-            {
-                TenHS = "E";
-            }
-        }
-
         static void Main(string[] args)
         {
             #region Biến tĩnh
