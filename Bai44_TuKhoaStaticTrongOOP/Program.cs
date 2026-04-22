@@ -58,7 +58,7 @@ namespace Bai44_TuKhoaStaticTrongOOP
 
         static class NhanVien
         {
-            public static int MaNV = 456;
+            private static int MaNV = 456;
 
             public static void TenNhanVien(string TenNV)
             {
