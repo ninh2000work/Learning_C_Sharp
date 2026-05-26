@@ -7,6 +7,43 @@ using System.Threading.Tasks;
 
 namespace Bai44_TuKhoaStaticTrongOOP
 {
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            #region Biến tĩnh
+            Console.WriteLine("So luong sinh vien: {0}\n", SinhVien.Count);
+
+            SinhVien SV1 = new SinhVien();
+            Console.WriteLine("So luong sinh vien: " + SinhVien.Count);
+            Console.WriteLine("TenSV: {0}, MSSV: {1}", SV1.Hoten, SV1.Mssv);
+            SV1.ThongTin();
+
+            SinhVien SV2 = new SinhVien("B", 5678);
+            Console.WriteLine("So luong sinh vien: " + SinhVien.Count);
+            Console.WriteLine("TenSV: {0}, MSSV: {1}", SV2.Hoten, SV2.Mssv);
+            SV2.ThongTin();
+            #endregion
+
+            #region Phương thức tĩnh
+            SinhVien.ThongTinSV("C", 2468);
+            Console.WriteLine("So luong sinh vien: " + SinhVien.Count);
+            #endregion
+
+            #region Lớp tĩnh
+            Console.WriteLine();
+            NhanVien.TenNhanVien("D");
+            #endregion
+
+            #region Phương thức khởi tạo tĩnh (Constructor tĩnh)
+            Console.WriteLine();
+            Console.WriteLine("TenHS: " + HocSinh.TenHS);
+            #endregion
+
+            Console.ReadKey();
+        }
+    }
+
     class SinhVien
     {
         private string hoten;
@@ -70,43 +107,6 @@ namespace Bai44_TuKhoaStaticTrongOOP
         static HocSinh()
         {
             TenHS = "E";
-        }
-    }
-
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            #region Biến tĩnh
-            Console.WriteLine("So luong sinh vien: {0}\n", SinhVien.Count);
-
-            SinhVien SV1 = new SinhVien();
-            Console.WriteLine("So luong sinh vien: " + SinhVien.Count);
-            Console.WriteLine("TenSV: {0}, MSSV: {1}", SV1.Hoten, SV1.Mssv);
-            SV1.ThongTin();
-
-            SinhVien SV2 = new SinhVien("B", 5678);
-            Console.WriteLine("So luong sinh vien: " + SinhVien.Count);
-            Console.WriteLine("TenSV: {0}, MSSV: {1}", SV2.Hoten, SV2.Mssv);
-            SV2.ThongTin();
-            #endregion
-
-            #region Phương thức tĩnh
-            SinhVien.ThongTinSV("C", 2468);
-            Console.WriteLine("So luong sinh vien: " + SinhVien.Count);
-            #endregion
-
-            #region Lớp tĩnh
-            Console.WriteLine();
-            NhanVien.TenNhanVien("D");
-            #endregion
-
-            #region Phương thức khởi tạo tĩnh (Constructor tĩnh)
-            Console.WriteLine();
-            Console.WriteLine("TenHS: " + HocSinh.TenHS);
-            #endregion
-
-            Console.ReadKey();
         }
     }
 }

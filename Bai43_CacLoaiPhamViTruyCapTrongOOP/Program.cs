@@ -6,6 +6,22 @@ using System.Threading.Tasks;
 
 namespace Bai43_CacLoaiPhamViTruyCapTrongOOP
 {
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            SinhVien A = new SinhVien();
+            A.FullName = "HelloWorld";
+            Console.WriteLine("FullName is " + A.FullName);
+
+            Console.WriteLine("FullName is " + A.GetFullName());
+            A.SetID(1234);
+            A.InfoStudent();
+
+            Console.ReadKey();
+        }
+    }
+
     class SinhVien
     {
         private string HoTen;
@@ -37,21 +53,6 @@ namespace Bai43_CacLoaiPhamViTruyCapTrongOOP
         public void InfoStudent()
         {
             Console.WriteLine("Fullname is {0}, ID is {1}", HoTen, MSSV);
-        }
-    }
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            SinhVien A = new SinhVien();
-            A.FullName = "HelloWorld";
-            Console.WriteLine("FullName is " + A.FullName);
-
-            Console.WriteLine("FullName is " + A.GetFullName());
-            A.SetID(1234);
-            A.InfoStudent();
-
-            Console.ReadKey();
         }
     }
 }
