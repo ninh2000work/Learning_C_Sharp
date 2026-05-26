@@ -46,20 +46,20 @@ namespace Bai25_ArrayListTrongCSharp
                 Console.WriteLine(item.ToString());
             }
 
+            Console.ReadKey();
+
             // Sắp xếp danh sách Person theo tiêu chí tuổi tăng dần
             arrPerSons.Sort(new SortPersons());
 
             // In danh sách Person sau khi sắp xếp
-            Console.WriteLine();
             Console.WriteLine("New List Person: ");
             foreach (Person item in arrPerSons)
             {
                 Console.WriteLine(item.ToString());
             }
+            #endregion
 
             Console.ReadKey();
-
-            #endregion
         }
     }
     
