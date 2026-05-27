@@ -6,6 +6,22 @@ using System.Threading.Tasks;
 
 namespace Bai45_KeThuaTrongOOP
 {
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student SV1 = new Student();
+            SV1.Info();
+            SV1.Info1();
+
+            Student SV2 = new Student("B", 22);
+            SV2.Info();
+            SV2.Info2();
+
+            Console.ReadKey();
+        }
+    }
+
     class People
     {
         protected string Name;
@@ -13,7 +29,7 @@ namespace Bai45_KeThuaTrongOOP
 
         public People()
         {
-            
+
         }
 
         public People(string name, int age)
@@ -60,22 +76,6 @@ namespace Bai45_KeThuaTrongOOP
         {
             Console.WriteLine("Name is {0}, Age is {1}", Name, Age);
             base.Info2();
-        }
-    }
-
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Student SV1 = new Student();
-            SV1.Info();
-            SV1.Info1();
-
-            Student SV2 = new Student("B", 22);
-            SV2.Info();
-            SV2.Info2();
-
-            Console.ReadKey();
         }
     }
 }
