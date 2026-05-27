@@ -11,9 +11,13 @@ namespace Bai43_CacLoaiPhamViTruyCapTrongOOP
         static void Main(string[] args)
         {
             SinhVien A = new SinhVien();
-            A.FullName = "HelloWorld";
-            Console.WriteLine("FullName is " + A.FullName);
+            A.InfoStudent();
 
+            A.FullName = "B";
+            A.ID = 2222;
+            A.InfoStudent();
+
+            A.FullName = "C";
             Console.WriteLine("FullName is " + A.GetFullName());
             A.SetID(1234);
             A.InfoStudent();
@@ -24,8 +28,8 @@ namespace Bai43_CacLoaiPhamViTruyCapTrongOOP
 
     class SinhVien
     {
-        private string HoTen;
-        private int MSSV;
+        private string HoTen = "A";
+        private int MSSV = 1111;
 
         public string FullName
         {
@@ -40,19 +44,32 @@ namespace Bai43_CacLoaiPhamViTruyCapTrongOOP
             }
         }
 
+        public int ID
+        {
+            get
+            {
+                return MSSV;
+            }
+
+            set
+            {
+                MSSV = value;
+            }
+        }
+
         public string GetFullName()
         {
             return HoTen;
         }
 
-        public void SetID(int ID)
+        public void SetID(int id)
         {
-            MSSV = ID;
+            MSSV = id;
         }
 
         public void InfoStudent()
         {
-            Console.WriteLine("Fullname is {0}, ID is {1}", HoTen, MSSV);
+            Console.WriteLine("Fullname is {0}, ID is {1}\n", HoTen, MSSV);
         }
     }
 }
