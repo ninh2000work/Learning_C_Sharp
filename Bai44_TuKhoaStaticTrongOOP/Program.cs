@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,32 +13,27 @@ namespace Bai44_TuKhoaStaticTrongOOP
         static void Main(string[] args)
         {
             #region Biến tĩnh
-            Console.WriteLine("So luong sinh vien: {0}\n", SinhVien.Count);
+            Console.WriteLine("So luong sinh vien: " + SinhVien.count);
 
             SinhVien SV1 = new SinhVien();
-            Console.WriteLine("So luong sinh vien: " + SinhVien.Count);
-            Console.WriteLine("TenSV: {0}, MSSV: {1}", SV1.Hoten, SV1.Mssv);
-            SV1.ThongTin();
+            Console.WriteLine("TenSV: {0}, MSSV: {1}", SV1.Name, SV1.ID);
+            Console.WriteLine("So luong sinh vien: " + SinhVien.count);
 
-            SinhVien SV2 = new SinhVien("B", 5678);
-            Console.WriteLine("So luong sinh vien: " + SinhVien.Count);
-            Console.WriteLine("TenSV: {0}, MSSV: {1}", SV2.Hoten, SV2.Mssv);
-            SV2.ThongTin();
+            SinhVien SV2 = new SinhVien("B", 2222);
+            Console.WriteLine("TenSV: {0}, MSSV: {1}", SV2.Name, SV2.ID);
+            Console.WriteLine("So luong sinh vien: " + SinhVien.count);
             #endregion
 
             #region Phương thức tĩnh
-            SinhVien.ThongTinSV("C", 2468);
-            Console.WriteLine("So luong sinh vien: " + SinhVien.Count);
+            SinhVien.InfoSV("C", 3333);
+            Console.WriteLine("So luong sinh vien: " + SinhVien.count);
             #endregion
 
             #region Lớp tĩnh
-            Console.WriteLine();
-            NhanVien.TenNhanVien("D");
+            SinhVien.School.SchoolSV("EE");
             #endregion
 
             #region Phương thức khởi tạo tĩnh (Constructor tĩnh)
-            Console.WriteLine();
-            Console.WriteLine("TenHS: " + HocSinh.TenHS);
             #endregion
 
             Console.ReadKey();
@@ -46,67 +42,64 @@ namespace Bai44_TuKhoaStaticTrongOOP
 
     class SinhVien
     {
-        private string hoten;
-        private int mssv;
+        private string name = null;
+        private int id = 0;
 
-        public string Hoten
+        public string Name
         {
-            get { return hoten; }
+            get { return name; }
 
-            set { hoten = value; }
+            set { name = value; }
         }
 
-        public int Mssv
+        public int ID
         {
-            get { return mssv; }
+            get { return id; }
 
-            set { mssv = value; }
+            set { id = value; }
         }
-
-        public static int Count;
 
         public SinhVien()
         {
-            hoten = "A";
-            mssv = 1234;
-            Count++;
+            name = "A";
+            id = 1111;
+            count++;
         }
 
-        public SinhVien(string ten, int ms)
+        public SinhVien(string name1, int id1)
         {
-            hoten = ten;
-            mssv = ms;
-            Count++;
+            name = name1;
+            id = id1;
+            count++;
         }
 
-        public void ThongTin()
+        // Biến tĩnh
+        public static int count;
+
+
+        // Phương thức tĩnh
+        public static void InfoSV(string name, int id)
         {
-            Console.WriteLine("TenSV: {0}, MSSV: {1}\n", hoten, mssv);
+            Console.WriteLine("TenSV: {0}, MSSV: {1}", name, id);
+            count++;
         }
 
-        public static void ThongTinSV(string ten1, int ms1)
+        // Lớp tĩnh
+        public static class School
         {
-            Console.WriteLine("TenSV: {0}, MSSV: {1}", ten1, ms1);
-            Count++;
+            private static string school;
+
+            public static void SchoolSV(string school1)
+            {
+                school = school1;
+                Console.WriteLine("TruongSV: " + school);
+            }
         }
-    }
 
-    static class NhanVien
-    {
-        private static int MaNV = 456;
-
-        public static void TenNhanVien(string TenNV)
+        // Phương thức khởi tạo tĩnh (Constructor tĩnh)
+        static SinhVien()
         {
-            Console.WriteLine("TenNV: {0}, MaNV: {1}", TenNV, MaNV);
-        }
-    }
-
-    class HocSinh
-    {
-        public static string TenHS;
-        static HocSinh()
-        {
-            TenHS = "E";
+            Console.WriteLine("Static Constructor");
         }
     }
 }
