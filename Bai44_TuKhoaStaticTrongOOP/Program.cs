@@ -74,7 +74,7 @@ namespace Bai44_TuKhoaStaticTrongOOP
         }
 
         // Biến tĩnh
-        public static int count;
+        public static int count = 100;
 
 
         // Phương thức tĩnh
@@ -99,6 +99,7 @@ namespace Bai44_TuKhoaStaticTrongOOP
         static SinhVien()
         {
             Console.WriteLine("Static Constructor");
+            count = 0;
         }
     }
 }
