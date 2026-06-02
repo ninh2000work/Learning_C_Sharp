@@ -29,7 +29,7 @@ namespace Bai45_KeThuaTrongOOP
 
         public People()
         {
-
+            //
         }
 
         public People(string name, int age)
@@ -64,7 +64,12 @@ namespace Bai45_KeThuaTrongOOP
 
         public Student(string name1, int age1) : base(name1, age1)
         {
+            //
+        }
 
+        public void Info()
+        {
+            base.Info();
         }
 
         public void Info1()
