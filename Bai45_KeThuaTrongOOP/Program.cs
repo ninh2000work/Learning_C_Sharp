@@ -67,11 +67,6 @@ namespace Bai45_KeThuaTrongOOP
             //
         }
 
-        public void Info()
-        {
-            base.Info();
-        }
-
         public void Info1()
         {
             Console.WriteLine("Name is {0}, Age is {1}", Name, Age);
