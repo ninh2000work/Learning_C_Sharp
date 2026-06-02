@@ -69,6 +69,7 @@ namespace Bai45_KeThuaTrongOOP
 
         public void Info1()
         {
+            // Lớp cha đã có phương thức này => Warning
             Console.WriteLine("Name is {0}, Age is {1}", Name, Age);
         }
 
