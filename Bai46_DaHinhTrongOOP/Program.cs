@@ -6,6 +6,23 @@ using System.Threading.Tasks;
 
 namespace Bai46_DaHinhTrongOOP
 {
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            People A = new Men();
+            A.Info1();
+
+            People B = new Women();
+            B.Info2();
+
+            University C = new School();
+            C.Info();
+
+            Console.ReadKey();
+        }
+    }
+
     class People
     {
         public void Info1()
@@ -23,6 +40,7 @@ namespace Bai46_DaHinhTrongOOP
     {
         public void Info1()
         {
+            // Lớp cha đã có phương thức này => Warning
             Console.WriteLine("Men");
         }
     }
@@ -45,23 +63,6 @@ namespace Bai46_DaHinhTrongOOP
         public override void Info()
         {
             Console.WriteLine("School");
-        }
-    }
-
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            People A = new Men();
-            A.Info1();
-
-            People B = new Women();
-            B.Info2();
-
-            University C = new School();
-            C.Info();
-
-            Console.ReadKey();
         }
     }
 }
