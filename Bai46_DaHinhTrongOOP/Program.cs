@@ -56,6 +56,7 @@ namespace Bai46_DaHinhTrongOOP
     abstract class University
     {
         public abstract void Info();
+        // Phương thức này phải là trống rỗng, không cho phép code tại đây
     }
 
     class School : University

@@ -6,19 +6,6 @@ using System.Threading.Tasks;
 
 namespace Bai47_InterfaceTrongOOP
 {
-    interface IPeople
-    {
-        void Info();
-    }
-
-    class Men : IPeople
-    {
-        public void Info()
-        {
-            Console.WriteLine("Men");
-        }
-    }
-
     internal class Program
     {
         static void Main(string[] args)
@@ -30,6 +17,19 @@ namespace Bai47_InterfaceTrongOOP
             B.Info();
 
             Console.ReadKey();
+        }
+    }
+
+    interface IPeople
+    {
+        void Info();
+    }
+
+    class Men : IPeople
+    {
+        public void Info()
+        {
+            Console.WriteLine("Men");
         }
     }
 }
