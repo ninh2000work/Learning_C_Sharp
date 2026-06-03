@@ -23,6 +23,7 @@ namespace Bai47_InterfaceTrongOOP
     interface IPeople
     {
         void Info();
+        // Phương thức này phải là trống rỗng, không cho phép code tại đây
     }
 
     class Men : IPeople
